@@ -1,0 +1,447 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@500&display=swap" rel="stylesheet">
+    <title>The Anti-Valentine's Day Bingo</title>
+    <style>
+        :root {
+            --cell-size: min(12vmin, 120px);
+            --gap: 10px;
+            --blue-checked: #FFB6C1;
+            --cell-bg: #efd1f3;
+            --cell-border: #d6d6d6;
+            --font-family: Roboto, Helvetica, Arial, sans-serif, 'Edu NSW ACT Cursive', cursive;
+        }
+
+        body {
+            font-family: var(--font-family);
+            /* background: #f7f7fb; */
+            margin: 20px;
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            width: 100%;
+            max-width: 820px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            margin: 0 0 6px 0;
+            font-size: 4rem;
+            text-align: center;
+            font-family: "Edu NSW ACT cursive", cursive;
+        }
+
+        p {
+            margin: 0 0 12px 0;
+            text-align: center;
+            color: #444;
+        }
+
+        .board {
+            display: grid;
+            grid-template-columns: repeat(5, minmax(0, 1fr));
+            gap: var(--gap);
+            width: 100%;
+            max-width: 100%;
+            padding: 1rem;
+            background-color: #FFB7CE;
+            border-radius: 10px;
+            box-sizing: border-box;
+            justify-items: center;
+        }
+
+        .cell {
+            aspect-ratio: 1 / 1;
+            width: 100%;
+            /* flexible but capped */
+            background: var(--cell-bg);
+            border: 2px solid white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0.4rem;
+            box-sizing: border-box;
+            border-radius: 10px;
+            cursor: pointer;
+            user-select: none;
+            transition: background 180ms ease, transform 120ms ease, box-shadow 120ms ease;
+            font-size: 1rem;
+            line-height: 1.1;
+            box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03);
+            overflow: hidden;
+            word-wrap: break-word;
+        }
+
+        .cell:active {
+            transform: translateY(1px);
+        }
+
+        .cell.checked {
+            background: #FE6D83;
+            color: white;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+            border-color: rgba(0, 0, 0, 0.06);
+        }
+
+        /* center free cell styling */
+        .cell.free {
+            background: linear-gradient(180deg, #fff 0%, #f2f7ff 100%);
+            border-style: dashed;
+            color: #333;
+            font-weight: 600;
+        }
+
+        .controls {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        .btn {
+            background: #0b2b36;
+            color: #fff;
+            border: none;
+            padding: 10px 14px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        .btn.ghost {
+            background: transparent;
+            color: #0b2b36;
+            border: 2px solid #d6d6d6;
+        }
+
+        @media (max-width: 600px) {
+            .board {
+                gap: 6px;
+                padding: 8px;
+            }
+
+            .cell {
+                width: clamp(50px, 18vw, 100px);
+            }
+
+            h1 {
+                margin: 0 0 6px 0;
+                font-size: 2rem;
+                text-align: center;
+                font-family: "Bagel Fat One", cursive;
+            }
+        }
+
+        /* Tighter spacing and smaller cells for phones */
+        @media (max-width: 480px) {
+            :root {
+                --gap: 5px;
+            }
+
+            .board {
+                padding: 6px;
+            }
+
+            .cell {
+                font-size: 0.6rem;
+                padding: 0.2rem;
+                border-radius: 6px;
+                width: 100%;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>The Anti-Valentine's Day Bingo</h1>
+        <p>Click on the tasks as you complete them.</p>
+
+        <div id="board" class="board" aria-label="The Anti-Valentine's Day Bingo"></div>
+
+        <div class="controls">
+            <button id="reset" class="btn ghost" title="Clear all marks">Reset</button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js" ></script>
+
+    <script>
+        // the 24 bingo items (in the order you supplied)
+        const items = [
+
+            "Finished a whole pint of ice cream… alone", 
+            "Celebrated Galentine’s instead", 
+            "Thought about calling your ex", 
+            "… Actually called your ex", 
+            "Listened to a love song that definitely did not make you feel better", 
+            "Watched a movie with your besties", 
+            "Gone on a first date on Valentine’s Day", 
+            "Spent the day on a solo date around the city", 
+            "Taken a long relaxing bath", 
+            "Spotted couples everywhere", 
+            "Muttered obscenities at said couples", 
+            "Hung out with family", 
+            "Crashed out over potentially never finding the “one”",
+            "Convinced yourself you don’t need anybody else after all", 
+            "Given yourself bangs", 
+            "Locked yourself in your room for the entire day", 
+            "Had a self-care day", 
+            "Scrolled through a million Valentine’s themed reels or TikToks", 
+            "Decided that wine is better than holding hands",
+            "Made an elaborate meal for one", 
+            "Cuddled with your pet", 
+            "FaceTimed your long distance besties",
+            "Worked out to keep the despair at bay",
+            "Made impromptu plans that were better than any dates you’ve been on" 
+
+        ];
+
+        // storage key for persistence
+        const STORAGE_KEY = "valentine_bingo_state_v1";
+
+        // build a 5x5 board, leaving center (2,2) free
+        const boardEl = document.getElementById("board");
+
+        // load saved checked state (array of booleans length 25)
+        function loadState() {
+            try {
+                const raw = localStorage.getItem(STORAGE_KEY);
+                if (!raw) return Array(25).fill(false);
+                const parsed = JSON.parse(raw);
+                if (!Array.isArray(parsed) || parsed.length !== 25) return Array(25).fill(false);
+                return parsed;
+            } catch (e) {
+                console.warn("Could not load state:", e);
+                return Array(25).fill(false);
+            }
+        }
+        function saveState(state) { localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); }
+
+        const state = loadState();
+
+        // populate board
+        // mapping: fill cells row-major 0..24; center index = 12 (3rd row, 3rd col)
+        let itemIndex = 0;
+        for (let i = 0; i < 25; i++) {
+            const cell = document.createElement("button");
+            cell.className = "cell";
+            cell.type = "button";
+            cell.setAttribute("data-index", i);
+            cell.setAttribute("aria-pressed", "false");
+
+            if (i === 12) {
+                // center free cell - left empty for user's picture
+                cell.classList.add("free");
+                cell.id = "free-cell";
+                // hint content so it's not totally blank — you can remove text or replace with an <img> later
+                cell.innerHTML = "<div style='font-size:0.9rem'>FREE<br></div>";
+                // free cell should not toggle checked state when clicked; but allow future replacement
+                cell.addEventListener("click", (e) => {
+                    // no toggle; quick visual pulse
+                    cell.animate([{ transform: "scale(1)" }, { transform: "scale(0.98)" }, { transform: "scale(1)" }], { duration: 160 });
+                });
+                // ensure center free cell is never stored as checked
+                state[i] = false;
+            } else {
+                // fill from items list
+                const text = items[itemIndex++] || "";
+                // wrap text so it truncates gracefully on small screens
+                cell.innerHTML = `<span class="label">${escapeHtml(text)}</span>`;
+
+                // restore checked state if present
+                if (state[i]) {
+                    cell.classList.add("checked");
+                    cell.setAttribute("aria-pressed", "true");
+                }
+
+                // toggling behavior
+                cell.addEventListener("click", () => {
+                    const idx = Number(cell.getAttribute("data-index"));
+                    const checked = cell.classList.toggle("checked");
+                    cell.setAttribute("aria-pressed", checked ? "true" : "false");
+                    state[idx] = checked;
+                    saveState(state);
+
+                    // for confetti/bingo
+                    checkForBingo();
+                });
+            }
+
+            boardEl.appendChild(cell);
+        }
+
+        // BINGO + Confetti
+        const allCells = Array.from(document.querySelectorAll(".cell"));
+        let confettiFired = false;
+
+        // treating FREE space as checked
+        function isMarked(i) {
+            if (i === 12) return true; // FREE counts
+            return allCells[i].classList.contains("checked");
+        }
+
+        const BINGO_LINES = [
+            // rows
+            [0,1,2,3,4],
+            [5,6,7,8,9],
+            [10,11,12,13,14],
+            [15,16,17,18,19],
+            [20,21,22,23,24],
+            // cols
+            [0,5,10,15,20],
+            [1,6,11,16,21],
+            [2,7,12,17,22],
+            [3,8,13,18,23],
+            [4,9,14,19,24],
+            // diagonals
+            [0,6,12,18,24],
+            [4,8,12,16,20]
+        ];
+
+        function clearBingoHighlights() {
+            allCells.forEach(c => c.classList.remove("bingo"));
+        }
+
+        function getCompletedLines() {
+            return BINGO_LINES.filter(line => line.every(isMarked));
+        }
+
+        function highlightCompletedLines(lines) {
+            lines.forEach(line => line.forEach(i => allCells[i].classList.add("bingo")));
+        }
+
+        function fireConfetti() {
+        // heart, confetti if not heart
+            try {
+                const svgHeart = confetti.shapeFromPath({
+                        path: "M10 30 C 10 20, 20 10, 30 10 C 40 10, 50 20, 50 30 C 50 45, 30 60, 30 60 C 30 60, 10 45, 10 30 Z",
+                        matrix: [0.25, 0, 0, 0.25, 0, 0]
+                });
+
+                confetti({
+                    shapes: [svgHeart],
+                    particleCount: 120,
+                    spread: 95,
+                    startVelocity: 35,
+                    origin: { y: 0.7 }
+                });
+
+            } catch {
+                confetti({ particleCount: 180, spread: 80, origin: { y: 0.7 } });
+            }
+            setTimeout(() => confetti({ particleCount: 120, spread: 120, origin: { y: 0.6 } }), 150);
+        }
+
+        function checkForBingo() {
+            const completed = getCompletedLines();
+            clearBingoHighlights();
+
+            if (completed.length > 0) {
+                highlightCompletedLines(completed);
+                if (!confettiFired) {
+                    confettiFired = true;
+                    fireConfetti();
+            }
+            }
+        }
+
+        // helpers
+        function escapeHtml(s) {
+            return s
+                .replaceAll("&", "&amp;")
+                .replaceAll("<", "&lt;")
+                .replaceAll(">", "&gt;")
+                .replaceAll('"', "&quot;");
+        }
+
+        // reset button
+        document.getElementById("reset").addEventListener("click", () => {
+            for (let i = 0; i < 25; i++) {
+                if (i === 12) continue;
+                const btn = boardEl.querySelector(`[data-index="${i}"]`);
+                if (btn) {
+                    btn.classList.remove("checked");
+                    btn.setAttribute("aria-pressed", "false");
+                }
+                state[i] = false;
+            }
+            saveState(state);
+            confettiFired = false;
+            clearBingoHighlights();
+        });
+
+        function indexToItemPos(index) {
+            // convert 0..24 index to items array index (skipping center)
+            if (index === 12) return -1;
+            // count how many non-center cells before index
+            let count = 0;
+            for (let i = 0; i < index; i++) {
+                if (i === 12) continue;
+                count++;
+            }
+            return count;
+        }
+
+        // === AUTO RESIZE TEXT TO FIT CELLS ===
+        function resizeAllText() {
+            const cells = document.querySelectorAll(".cell:not(.free)");
+            let minSize = Infinity;
+
+            // First pass: find smallest fitting font size per cell
+            cells.forEach(cell => {
+                const span = cell.querySelector(".label");
+                if (!span) return;
+
+                span.style.fontSize = "16px";
+                const boxHeight = cell.clientHeight - 8;
+                const boxWidth = cell.clientWidth - 8;
+                let size = 16;
+
+                while (
+                    (span.scrollHeight > boxHeight || span.scrollWidth > boxWidth) &&
+                    size > 8
+                ) {
+                    size -= 0.5;
+                    span.style.fontSize = size + "px";
+                }
+
+                if (size < minSize) minSize = size;
+            });
+
+            // Second pass: apply that smallest size to all cells
+            cells.forEach(cell => {
+                const span = cell.querySelector(".label");
+                if (span) span.style.fontSize = minSize + "px";
+            });
+        }
+
+        // Run once when the page loads
+        window.addEventListener("load", resizeAllText);
+        // Rerun whenever the window resizes
+        window.addEventListener("resize", resizeAllText);
+
+        checkForBingo();
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,242 @@
+{
+  "plugins": {
+    "posthtml-include": {
+      "root": "./src"
+    },
+    "posthtml-expressions": {
+      "root": "./src/partials",
+      "locals": {
+        "top": [],
+        "body": [
+          {
+            "type": "text",
+            "value": "Columbia, amid its consideration to expand the undergraduate student body, <a href=\"https://www.housing.columbia.edu/news/whats-new-room-selection-ay-26-27\">announced</a> Jan. 20 that it has removed Wien Hall as an option for upperclass room selection, clearing space for the University to execute its proposed <a href=\"https://www.columbiaspectator.com/news/2025/11/21/columbia-considers-expanding-undergraduate-enrollment-by-up-to-20-percent/\">plan</a> to admit 20 percent more undergraduate first-year students."
+          },
+          {
+            "type": "text",
+            "value": "However, a Columbia official told Spectator that the University has yet to make a decision on both the status of Wien, which would be assigned outside of the room selection process, and on undergraduate expansion."
+          },
+          {
+            "type": "text",
+            "value": "“Nothing has been officially decided,” a University spokesperson wrote in a statement to Spectator—the same statement Columbia has provided since Nov. 19, 2025, when asked about its proposed expansion plans. “A robust examination of the many factors, academic and operational, is underway, and still requires active and thoughtful consideration by many stakeholders across our community.”"
+          },
+          {
+            "type": "text",
+            "value": "Historically, Columbia’s undergraduate first-year class has hovered between 1,400 and 1,500 students, who were housed in Carman Hall, John Jay Hall, Wallach Hall, Furnald Hall, and two floors of Hartley Hall."
+          },
+          {
+            "type": "text",
+            "value": "In 2025, Hartley was set to <a href=\"https://www.housing.columbia.edu/hartley\">undergo</a> renovations that would close the building until fall 2027, so Columbia <a href=\"https://www.columbiaspectator.com/news/2025/04/11/columbia-adds-wien-hall-as-option-for-first-year-housing/\">added</a> Wien as an option for first-year housing."
+          },
+          {
+            "type": "text",
+            "value": "By August 2025, Columbia <a href=\"https://www.columbiaspectator.com/news/2025/09/08/columbia-admits-largest-class-in-university-history-amid-admissions-reform/\">announced</a> it had enrolled 1,806 undergraduate students in the class of 2029. The class represented the largest-ever first-year class for Columbia College and the School of Engineering and Applied Science and followed <a href=\"https://www.columbiaspectator.com/news/2025/03/07/trump-administration-cuts-400-million-in-federal-funding-to-columbia/\">threats</a> to its federal research funding and an <a href=\"https://www.columbiaspectator.com/news/2025/07/23/columbia-will-pay-220-million-in-deal-with-trump-administration-to-resume-federal-funding/\">agreement</a> with President Donald Trump’s administration to decrease its “financial dependence” on international student enrollment."
+          },
+          {
+            "type": "text",
+            "value": "With Hartley under construction and 300 extra students enrolled, the University did not have enough room to house the first-year class."
+          },
+          {
+            "type": "text",
+            "value": "So they made room."
+          },
+          {
+            "type": "text",
+            "value": "Over the summer, the University relocated about 140 upperclassmen who had selected Wien into two dorms that previously served students in the School of General Studies and graduate programs. Then, mere weeks before the start of the academic year, Columbia <a href=\"https://www.columbiaspectator.com/news/2025/07/13/without-explanation-columbia-tells-around-160-general-studies-students-in-600-w-113th-st-and-503-w-121st-st-to-vacate-their-units/\">relocated</a> about 160 General Studies students from these two dorms. It provided no explanation for either of these relocations."
+          },
+          {
+            "type": "text",
+            "value": "Now, the University hopes to expand permanently."
+          },
+          {
+            "type": "image",
+            "value": {
+              "width": "50%",
+              "asset": "https://cloudfront-us-east-1.images.arcpublishing.com/spectator/NBP7BYUQJRF6FIB3P3KJMGR6JU.jpg",
+              "caption": "Wien has capacity for 355 students, allowing the University to enroll 300 more undergraduate first-year students should it decide to proceed with its expansion plans.",
+              "credit": "Zohar Ford"
+            }
+          },
+          {
+            "type": "text",
+            "value": "One proposed plan to expand undergraduate enrollment involves perpetuating the increased size of the class of 2029 for all future admissions cycles. Under the plan, the University would distribute an increase in total enrollment over three years, ultimately expanding total enrollment by 20 percent."
+          },
+          {
+            "type": "text",
+            "value": "The University first stated that it would finalize a decision on expansion by the end of November 2025, with its deadline for releasing early decision admissions results approaching. Facing <a href=\"https://www.columbiaspectator.com/news/2025/12/02/ccsc-and-esc-release-open-letter-opposing-potential-undergraduate-expansion/\">opposition</a> from student leaders, the University appeared to delay its stated deadline for making a decision. It continues to deny that it has officially approved any concrete plans, even after it <a href=\"https://www.columbiaspectator.com/news/2025/12/16/columbia-college-seas-see-slight-decrease-in-early-decision-applications-for-class-of-2030/\">admitted</a> the first members of the class of 2030 via early decision on Dec. 16, 2025."
+          },
+          {
+            "type": "text",
+            "value": "Columbia has yet to publicly acknowledge that it is even considering undergraduate expansion to the student body at large since Spectator learned about the plans through an internal communication in November 2025."
+          },
+          {
+            "type": "text",
+            "value": "Acting University President Claire Shipman, CC ’86, SIPA ’94, said at a University Senate plenary on Friday that Columbia was still meeting with stakeholders to address the issues expansion would pose and that the University had made “no final decisions.”"
+          },
+          {
+            "type": "image",
+            "value": {
+              "width": "50%",
+              "asset": "https://cloudfront-us-east-1.images.arcpublishing.com/spectator/KC7E6EVMIBBLPHBS5MVLK66GI4.jpg",
+              "caption": "Columbia first closed Hartley in 2025 for a full-building renovation, which will not be complete until fall 2027.",
+              "credit": "Zohar Ford"
+            }
+          },
+          {
+            "type": "text",
+            "value": "Before Columbia announced its admissions numbers in August 2025, the University had never publicly acknowledged that it was planning to expand the incoming class of 2029, despite sending out all of its admissions offers before the end of June 2025."
+          },
+          {
+            "type": "text",
+            "value": "Several student leaders, including the presidents of both Columbia College Student Council and the Engineering Student Council, told Spectator that it was only when the University relocated students from Wien that they were informed about how much larger the first-year class would be."
+          },
+          {
+            "type": "text",
+            "value": "Columbia has also had to make room for the expanded class of 2029 past their first year. The University has added two new dorms, 542 W. 112th St. and 548 W. 114th St., as options for upperclassmen room selection and removed 503 W. 121st St., also called The Fairholm, according to the Jan. 20 announcement. Of the two dorms newly available for upperclassmen, one, 542 W. 112th St., formerly housed graduate and General Studies students, and the other, 548 W. 114th St., was formerly fraternity housing for Kappa Delta Rho."
+          },
+          {
+            "type": "graphic",
+            "value": {
+              "asset": "newhousing.html"
+            }
+          },
+          {
+            "type": "text",
+            "value": "Shipman <a href=\"https://www.columbiaspectator.com/news/2025/10/28/shipman-apologizes-to-gs-students-for-sudden-housing-relocation-following-release-of-gssc-survey-report/\">apologized</a> to the General Studies students impacted by the summer 2025 housing relocation in an October 2025 email obtained by Spectator, though, like the University’s original notice, she did not provide any explanation for the change. Administrators, students, and faculty members have expressed desires for any future expansion to avoid similar disruptions arising from unplanned growth."
+          },
+          {
+            "type": "text",
+            "value": "“When you add a significant number of students to an already strained infrastructure, you are going to be upsetting an institution that’s already teetering in a very precarious, delicate balance right now,” Robert Mulvey, GS ’26, University senator and senior resident advisor, told Spectator. “All of our facilities are going to see a strain.”"
+          },
+          {
+            "type": "text",
+            "value": "Mulvey warned that there is not enough work being done in assessing how this would affect the school in the future."
+          },
+          {
+            "type": "text",
+            "value": "Columbia has convened at least two committees to examine the operational and academic feasibility of any undergraduate expansion efforts. Shipman said at the plenary that she hoped to reach a “consensus” on how to move forward by next month, when Columbia is set to release regular decision admissions results."
+          },
+          {
+            "type": "text",
+            "value": "Wien, unlike the other dorms designated exclusively for first-year students, lies across Amsterdam Avenue away from the core part of the Morningside Heights campus. The other four first-year dorms surround South Lawn."
+          },
+          {
+            "type": "text",
+            "value": "Columbia Housing <a href=\"https://web.archive.org/web/20250410233229/https://www.housing.columbia.edu/content/wien-hall\">listed</a> Wien as housing “mostly juniors” with “some” seniors, sophomores, and first-year students in April 2025. By November 2025, Wien housed “mostly or only first-year students,” according to the Columbia Housing website."
+          },
+          {
+            "type": "text",
+            "value": "The University now <a href=\"https://www.housing.columbia.edu/content/wien-hall\">lists</a> Wien as housing “first-years only.” A member of Residential Life told Spectator that a small number of upperclassmen live in Wien for the 2025-26 academic year."
+          },
+          {
+            "type": "text",
+            "value": "Before Wednesday, the Columbia Housing website read, “First-Year students in Wien will be living on-campus among a community of more than 300 other new students.” Following Spectator’s request for comment, the University edited the page to clarify that this language only applied for the 2025-26 academic year."
+          },
+          {
+            "type": "text",
+            "value": "Columbia requires first-year students to live on campus, with few exceptions, and guarantees housing to incoming first-year students for four years. About 90 <a href=\"https://undergrad.admissions.columbia.edu/life/here/housing-dining\">percent</a> of all undergraduate students in Columbia College and SEAS live on campus."
+          },
+          {
+            "type": "text",
+            "value": "542 W. 112th St., one of the new dorms the University made available for sophomores, juniors, and seniors for the 2026-27 academic year, is currently managed by Columbia Residential, which provides housing for GS students, graduate students, and faculty members. It contains 138 residential apartments, split between shared and private apartments, which are currently allocated for eligible students. A University official told Spectator that Columbia is still determining the building’s space configurations and would provide details on its capacity by the start of room selection."
+          },
+          {
+            "type": "image",
+            "value": {
+              "width": "50%",
+              "asset": "https://cloudfront-us-east-1.images.arcpublishing.com/spectator/CPLZGY5BBRE75OORWEXZS4JWGM.jpg",
+              "caption": "542 W. 112th St. is currently designated for General Studies and graduate students, but will house undergraduates in the 2026-27 academic year.",
+              "credit": "Zohar Ford"
+            }
+          },
+          {
+            "type": "text",
+            "value": "Mulvey asked Shipman at the plenary whether the University would reconsider its decision to remove 542 W. 112th St. as an option for graduate and General Studies students, saying that the removal was similar to the University’s housing relocations during summer 2025."
+          },
+          {
+            "type": "text",
+            "value": "Shipman responded that the University had anticipated needing to implement safety upgrades in the building, including the addition of a sprinkler system, and that the University was working with students currently living in the building affected by the redesignation to ensure they have “top tier selection” for their housing needs."
+          },
+          {
+            "type": "text",
+            "value": "A University official confirmed to Spectator that Columbia would update the building’s fire systems in accordance with New York City regulations over the summer. The intrusive nature of the work caused the University to plan the project for when residents will not be present, according to the official."
+          },
+          {
+            "type": "text",
+            "value": "“It is fortunate that they were given much more time in this scenario,” Mulvey said in an interview with Spectator. “But it still has the same spirit behind it in that schools and students who are experiencing crises of housing, where grad students aren’t guaranteed housing nor even students like Ph.D. students, who are guaranteed housing, are being brushed aside to make room for an expanded class size for undergraduate students.”"
+          },
+          {
+            "type": "text",
+            "value": "548 W. 114th St., Kappa Delta Rho’s former brownstone which the University added to upperclassmen room selection, has capacity for 18 students. According to the Columbia Housing <a href=\"https://www.housing.columbia.edu/fsl-brownstones\">website</a>, the University no longer provides KDR with its own brownstone."
+          },
+          {
+            "type": "image",
+            "value": {
+              "width": "50%",
+              "asset": "https://cloudfront-us-east-1.images.arcpublishing.com/spectator/RNWXDWNKTVHEDG6RAIVE77R6ZA.jpg",
+              "caption": "548 W. 114th St. was formerly the brownstone for Kappa Delta Rho.",
+              "credit": "Zohar Ford"
+            }
+          },
+          {
+            "type": "text",
+            "value": "The Fairholm, which the University removed as a housing option for Columbia College and SEAS students for the 2026-27 academic year, was one of two dorms, along with 600 W. 113th St., that the University had relocated General Studies students from in summer 2025."
+          },
+          {
+            "type": "text",
+            "value": "A University official told Spectator that Columbia Housing occasionally adjusts its available options every year to balance student needs. The official did not specify which residents The Fairholm would house next year."
+          },
+          {
+            "type": "image",
+            "value": {
+              "width": "50%",
+              "asset": "https://cloudfront-us-east-1.images.arcpublishing.com/spectator/6ANHOEOWLFBFDOEULKCNF3XYEU.jpg",
+              "caption": "Columbia relocated about 160 General Studies students from The Fairholm and 600 W. 113th St. over the summer.",
+              "credit": "Zohar Ford"
+            }
+          },
+          {
+            "type": "text",
+            "value": "Columbia Housing, which provides housing for undergraduate students in Columbia College and SEAS, <a href=\"https://www.columbiaspectator.com/news/2025/09/08/inside-columbias-newest-dorm-611-w-112th-st/\">opened</a> its newest dorm, a converted historic hotel named The Maranamay, at 611 W. 112th St., in fall 2025. The building has capacity for over 150 students. Hartley, by the time the University completes its renovations, will have capacity for about 230 students."
+          },
+          {
+            "type": "text",
+            "value": "A new 34-story apartment complex serving students, postdocs, and faculty and staff with more than 142 residential apartments has also recently been added to the University’s housing portfolio. The University completed construction on the building, 600 W. 125th St., in June 2025."
+          },
+          {
+            "type": "text",
+            "value": "Mulvey told Spectator that students who had been relocated asked Columbia to reconsider its plans, to no avail, and he felt the University was being dishonest about its intentions regarding expansion."
+          },
+          {
+            "type": "text",
+            "value": "“It’s like if someone, somewhere, started positioning tanks on the border of a country. ‘We’re not doing anything, we’re just thinking about it still,’” Mulvey said. “No, you’re positioning yourself to do exactly what you’re posturing to do.”"
+          },
+          {
+            "type": "text",
+            "value": "<i>Staff Writer Matt Luo can be contacted at </i><a href=\"mailto:matt.luo@columbiaspectator.com\"><i>matt.luo@columbiaspectator.com</i></a><i>. Follow Spectator on X </i><a href=\"https://twitter.com/columbiaspec?lang=en\"><i>@ColumbiaSpec</i></a><i>.</i>"
+          },
+          {
+            "type": "text",
+            "value": "<i>Deputy Data Visualization Editor Arabelle Park can be contacted at </i><a href=\"mailto:arabelle.park@columbiaspectator.com\"><i>arabelle.park@columbiaspectator.com</i></a><i>. </i><i>Follow Spectator on X </i><a href=\"https://twitter.com/columbiaspec?lang=en\"><i>@ColumbiaSpec</i></a><i>.</i>"
+          },
+          {
+            "type": "text",
+            "value": "<b><i>Want to keep up with breaking news? Subscribe to our </i></b><a href=\"https://columbiaspectator.us4.list-manage.com/subscribe?u=a3d2eeb1ae5560ca04f82f042&id=e51c51d62d\"><b><i>email newsletter </i></b></a><b><i>and like Spectator on </i></b><a href=\"https://www.facebook.com/columbiaspectator\"><b><i>Facebook</i></b></a><b><i>. </i></b>"
+          }
+        ],
+        "headline": "Paving the way for undergraduate expansion, Columbia shifts housing options",
+        "dek": "The University announced Jan. 20 that it has removed Wien Hall as an option for upperclass room selection, leaving room for the University to execute its proposed 20 percent increase to undergraduate class size.",
+        "date": "February 12, 2026",
+        "byline": "By <a href=\"https://www.columbiaspectator.com/contributors/matt-luo/\">Matt Luo</a>",
+        "byline2": "Graphic by <a href=\"https://www.columbiaspectator.com/contributors/arabelle-park/\">Arabelle Park</a>",
+        "cover_asset": "https://cloudfront-us-east-1.images.arcpublishing.com/spectator/NBP7BYUQJRF6FIB3P3KJMGR6JU.jpg",
+        "cover_caption": "Zohar Ford / Deputy Photo Editor",
+        "USE_NEWS_NAV": true,
+        "USE_EYE_NAV": false,
+        "USE_COVER_HED": true,
+        "IS_EMBED": false,
+        "DOC_URL": "https://docs.google.com/document/d/1BzRqFBcqSoc03kIhavzpaD1Q7MVAxE6ksigtRYHWoKo/edit?usp=sharing"
+      }
+    }
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "plugins": {
+    "posthtml-include": {
+      "root": "./src"
+    },
+    "posthtml-expressions": {
+      "root": "./src/partials",
+      "locals": {
+        "top": [],
+        "body": [
+          {
+            "type": "text",
+            "value": "February can be tough, for reasons other than the lung-crushing winds in New York City. The so-called month of love brings with it a slew of roses, chocolates, and heart-shaped everything. If you think Cupid’s holiday is more of a capitalist plot (or you’re just bitterly single), you’re not alone—we at Spectrum are right there with you."
+          },
+          {
+            "type": "text",
+            "value": "If it starts to feel like everyone but you is happily in a couple, then this anti-Valentine’s bingo is for you! Without further ado: Instead of spending Valentine’s Day loved and doted upon, have you…"
+          },
+          {
+            "type": "graphic",
+            "value": {
+              "asset": "antibingo.html"
+            }
+          },
+          {
+            "type": "text",
+            "value": "Whether you hit bingo while wallowing in your blankets or spending the day with your best friends, one thing is clear: Valentine’s Day is only 24 hours. While the weight of the holiday might make it feel endlessly long, remember that love is not determined by the date on the calendar. So, regardless of whether you spend your day curled up with a good book or choose to go wild in the city, we hope your day is one to remember."
+          },
+          {
+            "type": "text",
+            "value": "<i>Staff Writer Suhani Arora</i><i> can be contacted at </i><a href=\"mailto:suhani.arora@columbiaspectator.com\"><i>suhani.arora@columbiaspectator.com</i></a><i>. Thank you to my suitemates for having an endless list of anti-valentine activities.</i><i> </i><i>Follow Spectrum on </i><a href=\"https://www.instagram.com/cuspectrum/\"><i>X</i></a><i> </i><a href=\"https://twitter.com/cuspectrum?lang=en\"><i>@CUSpectrum</i></a><i>. </i>"
+          },
+          {
+            "type": "text",
+            "value": "<i>Deputy Data Visualization Editor Emily Ta can be contacted at </i><a href=\"mailto:emily.ta@columbiaspectator.com\"><i>emily.ta@columbiaspectator.com</i></a><i>. </i><i>Follow Spectator on X </i><a href=\"https://twitter.com/columbiaspec?lang=en\"><i>@ColumbiaSpec</i></a><i>.</i>"
+          },
+          {
+            "type": "text",
+            "value": "<b><i>Want to keep up with breaking news? Subscribe to our </i></b><a href=\"https://columbiaspectator.us4.list-manage.com/subscribe?u=a3d2eeb1ae5560ca04f82f042&id=e51c51d62d\"><b><i>email newsletter </i></b></a><b><i>and like Spectator on </i></b><a href=\"https://www.facebook.com/columbiaspectator\"><b><i>Facebook</i></b></a><b><i>. </i></b>"
+          }
+        ],
+        "headline": "The Anti-Valentine’s Day bingo",
+        "dek": "",
+        "date": "April 2, 2025",
+        "byline": "By <a href=\"https://www.columbiaspectator.com/contributors/suhani-arora/20/\">Suhani Arora</a>",
+        "byline2": "Development by <a href=\"https://www.columbiaspectator.com/contributors/emily-ta/\">Emily Ta</a>",
+        "cover_asset": "https://cloudfront-us-east-1.images.arcpublishing.com/spectator/P7QNRR6GIRC7BOKL74MZQNRKT4.jpg",
+        "cover_caption": "Ming Yuan / Columbia Daily Spectator",
+        "USE_NEWS_NAV": true,
+        "USE_EYE_NAV": false,
+        "USE_COVER_HED": true,
+        "IS_EMBED": false,
+        "DOC_URL": "https://docs.google.com/document/d/1MTSp3A9uRF90dwBCApH8ShuaKKVxLuGGUfcNkJGSN2k/edit?usp=sharing"
+      }
+    }
+  }
+}
